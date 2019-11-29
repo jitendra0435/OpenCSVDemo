@@ -1,17 +1,47 @@
 package com.bridgelabz;
-
-import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 
 public class CSVUser {
-    @CsvBindByName
+    @CsvBindByPosition(position = 0)
     private String name;
 
-    @CsvBindByName(column = "email", required = true)
+    @CsvBindByPosition(position = 1)
     private String email;
 
-    @CsvBindByName(column = "phone")
+    @CsvBindByPosition(position = 2)
     private String phoneNo;
 
-    @CsvBindByName
+    @CsvBindByPosition(position = 3)
     private String country;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }
